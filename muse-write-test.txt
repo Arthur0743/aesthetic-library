@@ -1,0 +1,1 @@
+Muse GitHub App write test - auto-update check. This file can be deleted.
