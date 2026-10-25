@@ -444,13 +444,33 @@ var RANK = { fit: 0, like: 1, ok: 2 };
 
 /* 标签按维度分组（分面筛选）：风格 / 技法 / 色彩 / 类型 */
 var TAG_GROUPS = [
-  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式"] },
+  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实"] },
   { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D"] },
   { name: "色彩", tags: ["黑白","明黄","粉红","粉黄","黄黑","霓虹"] },
   { name: "类型", tags: ["电商","角色设定"] }
 ];
 
 var ITEMS = [
+  /* —— 2026-10-25 · 实践批保留的 3 张 —— */
+  { id:"classical-concert", cat:"poster", theme:"classical", verdict:"like", date:"2026-10-25",
+    title:"古典音乐会 — 竖排大字编辑风海报",
+    tags:["古典","编辑风","特写"], w:2480, h:3512,
+    img:"https://i.pinimg.com/originals/a0/17/4f/a0174f6367b029649d2aeee8dfc16f3b.jpg",
+    alt:"米色黑调、竖排大字与大提琴演奏者照片的古典音乐会编辑风海报",
+    src:"https://www.pinterest.com/pin/874331715175975831/" },
+  { id:"forest-alchemist", cat:"character", theme:"character", verdict:"ok", date:"2026-10-25",
+    title:"森林炼金术士 — 狐灵角色设定图",
+    tags:["角色设定","奇幻"], w:736, h:874,
+    img:"https://i.pinimg.com/736x/f1/54/6f/f1546ffe013ebbee42b2b7bef55b1fa6.jpg",
+    alt:"森林炼金术士狐灵的多姿态角色设定图，绿金色调",
+    src:"https://www.pinterest.com/pin/973059063257146012/" },
+  { id:"pop-surreal", cat:"other", theme:"illo", verdict:"like", date:"2026-10-25",
+    title:"波普超现实 — 黄底条纹插画",
+    tags:["波普","超现实"], w:736, h:1104,
+    img:"https://i.pinimg.com/736x/f7/2a/ce/f72acea52f53312d883f4c4c95789df8.jpg",
+    alt:"黄底条纹人物与绿色面孔的波普超现实插画",
+    src:"https://www.pinterest.com/pin/834080793536291380/" },
+
   /* —— 2026-10-25 · 第二批保留的 4 张 —— */
   { id:"tokyo-noir", cat:"poster", theme:"collage", verdict:"ok", date:"2026-10-25",
     title:"东京夜闻 — 报纸拼贴朋克海报",
