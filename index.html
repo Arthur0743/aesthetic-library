@@ -444,13 +444,39 @@ var RANK = { fit: 0, like: 1, ok: 2 };
 
 /* 标签按维度分组（分面筛选）：风格 / 技法 / 色彩 / 类型 */
 var TAG_GROUPS = [
-  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影"] },
-  { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D"] },
+  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影","雾气"] },
+  { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D","几何"] },
   { name: "色彩", tags: ["黑白","明黄","粉红","粉黄","黄黑","霓虹"] },
-  { name: "类型", tags: ["电商","角色设定"] }
+  { name: "类型", tags: ["电商","角色设定","动物"] }
 ];
 
 var ITEMS = [
+  /* —— 2026-10-26 · 第二批保留的 4 张 —— */
+  { id:"sculptural-vase", cat:"other", theme:"minimal", verdict:"ok", date:"2026-10-26",
+    title:"干花雕塑陶瓶",
+    tags:["雕塑","极简"], w:736, h:1308,
+    img:"https://i.pinimg.com/736x/df/d5/c1/dfd5c1273779b10dd49830a7c266a7bf.jpg",
+    alt:"插有干花的雕塑感陶瓶",
+    src:"https://www.pinterest.com/pin/1133218325023807265/" },
+  { id:"moody-mountain", cat:"other", theme:"photo", verdict:"like", date:"2026-10-26",
+    title:"雾气阴郁山景摄影",
+    tags:["暗黑","雾气"], w:736, h:1288,
+    img:"https://i.pinimg.com/736x/c9/08/35/c90835b5da0f9e7b1c5ed1d189391b21.jpg",
+    alt:"雾气缭绕的阴郁山景摄影",
+    src:"https://www.pinterest.com/pin/1098456165390645439/" },
+  { id:"spiral-staircase", cat:"other", theme:"minimal", verdict:"ok", date:"2026-10-26",
+    title:"仰拍螺旋楼梯建筑",
+    tags:["极简","几何"], w:736, h:1103,
+    img:"https://i.pinimg.com/736x/ae/a5/82/aea582f6c9e108e1686ea858f5a80d21.jpg",
+    alt:"从下方仰拍的螺旋楼梯建筑",
+    src:"https://www.pinterest.com/pin/1023654190325593963/" },
+  { id:"red-stag", cat:"other", theme:"photo", verdict:"ok", date:"2026-10-26",
+    title:"雪松林红鹿摄影",
+    tags:["雾气","动物"], w:736, h:1097,
+    img:"https://i.pinimg.com/736x/a1/e9/7b/a1e97bc1afd7a8c576fbbce4ad4c5b9b.jpg",
+    alt:"金色时刻里站在雪松林中的红鹿摄影",
+    src:"https://www.pinterest.com/pin/972566482041935420/" },
+
   /* —— 2026-10-26 · 补发批保留的 1 张 —— */
   { id:"cycling-shadow", cat:"other", theme:"photo", verdict:"ok", date:"2026-10-26",
     title:"街头骑行 — 金色长影摄影",
