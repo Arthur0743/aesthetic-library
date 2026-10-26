@@ -422,7 +422,7 @@
    已确认入库的图片不带序号；不喜欢的图不进库。
    排序：喜欢程度优先，同程度按日期新→旧，再按名字。
    ============================================================ */
-var CATS = { poster: "海报设计", web: "网页设计", character: "角色设计", other: "其他" };
+var CATS = { poster: "海报设计", web: "网页设计", character: "角色设计", illo: "插画", photo: "摄影", product: "产品", architecture: "建筑" };
 var THEMES = {
   collage:   "拼贴编辑",
   dark:      "暗黑",
@@ -452,25 +452,25 @@ var TAG_GROUPS = [
 
 var ITEMS = [
   /* —— 2026-10-26 · 第二批保留的 4 张 —— */
-  { id:"sculptural-vase", cat:"other", theme:"minimal", verdict:"ok", date:"2026-10-26",
+  { id:"sculptural-vase", cat:"product", theme:"minimal", verdict:"ok", date:"2026-10-26",
     title:"干花雕塑陶瓶",
     tags:["雕塑","极简"], w:736, h:1308,
     img:"https://i.pinimg.com/736x/df/d5/c1/dfd5c1273779b10dd49830a7c266a7bf.jpg",
     alt:"插有干花的雕塑感陶瓶",
     src:"https://www.pinterest.com/pin/1133218325023807265/" },
-  { id:"moody-mountain", cat:"other", theme:"photo", verdict:"like", date:"2026-10-26",
+  { id:"moody-mountain", cat:"photo", theme:"photo", verdict:"like", date:"2026-10-26",
     title:"雾气阴郁山景摄影",
     tags:["暗黑","雾气"], w:736, h:1288,
     img:"https://i.pinimg.com/736x/c9/08/35/c90835b5da0f9e7b1c5ed1d189391b21.jpg",
     alt:"雾气缭绕的阴郁山景摄影",
     src:"https://www.pinterest.com/pin/1098456165390645439/" },
-  { id:"spiral-staircase", cat:"other", theme:"minimal", verdict:"ok", date:"2026-10-26",
+  { id:"spiral-staircase", cat:"architecture", theme:"minimal", verdict:"ok", date:"2026-10-26",
     title:"仰拍螺旋楼梯建筑",
     tags:["极简","几何"], w:736, h:1103,
     img:"https://i.pinimg.com/736x/ae/a5/82/aea582f6c9e108e1686ea858f5a80d21.jpg",
     alt:"从下方仰拍的螺旋楼梯建筑",
     src:"https://www.pinterest.com/pin/1023654190325593963/" },
-  { id:"red-stag", cat:"other", theme:"photo", verdict:"ok", date:"2026-10-26",
+  { id:"red-stag", cat:"photo", theme:"photo", verdict:"ok", date:"2026-10-26",
     title:"雪松林红鹿摄影",
     tags:["雾气","动物"], w:736, h:1097,
     img:"https://i.pinimg.com/736x/a1/e9/7b/a1e97bc1afd7a8c576fbbce4ad4c5b9b.jpg",
@@ -478,7 +478,7 @@ var ITEMS = [
     src:"https://www.pinterest.com/pin/972566482041935420/" },
 
   /* —— 2026-10-26 · 补发批保留的 1 张 —— */
-  { id:"cycling-shadow", cat:"other", theme:"photo", verdict:"ok", date:"2026-10-26",
+  { id:"cycling-shadow", cat:"photo", theme:"photo", verdict:"ok", date:"2026-10-26",
     title:"街头骑行 — 金色长影摄影",
     tags:["街头","光影"], w:736, h:1005,
     img:"https://i.pinimg.com/736x/7f/b9/b0/7fb9b077f357f235309cc5d09e3a12ab.jpg",
@@ -498,7 +498,7 @@ var ITEMS = [
     img:"https://i.pinimg.com/736x/f1/54/6f/f1546ffe013ebbee42b2b7bef55b1fa6.jpg",
     alt:"森林炼金术士狐灵的多姿态角色设定图，绿金色调",
     src:"https://www.pinterest.com/pin/973059063257146012/" },
-  { id:"pop-surreal", cat:"other", theme:"illo", verdict:"like", date:"2026-10-25",
+  { id:"pop-surreal", cat:"illo", theme:"illo", verdict:"like", date:"2026-10-25",
     title:"波普超现实 — 黄底条纹插画",
     tags:["波普","超现实"], w:736, h:1104,
     img:"https://i.pinimg.com/736x/f7/2a/ce/f72acea52f53312d883f4c4c95789df8.jpg",
