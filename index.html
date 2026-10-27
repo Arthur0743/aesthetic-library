@@ -422,7 +422,7 @@
    已确认入库的图片不带序号；不喜欢的图不进库。
    排序：喜欢程度优先，同程度按日期新→旧，再按名字。
    ============================================================ */
-var CATS = { poster: "海报设计", web: "网页设计", character: "角色设计", illo: "插画", photo: "摄影", product: "产品", architecture: "建筑" };
+var CATS = { poster: "海报设计", web: "网页设计", character: "角色设计", illo: "插画", photo: "摄影", product: "产品", architecture: "建筑", brand: "品牌设计", book: "书籍装帧" };
 var THEMES = {
   collage:   "拼贴编辑",
   dark:      "暗黑",
@@ -444,13 +444,39 @@ var RANK = { fit: 0, like: 1, ok: 2 };
 
 /* 标签按维度分组（分面筛选）：风格 / 技法 / 色彩 / 类型 */
 var TAG_GROUPS = [
-  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影","雾气"] },
-  { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D","几何"] },
+  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影","雾气","复古"] },
+  { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D","几何","格子"] },
   { name: "色彩", tags: ["黑白","明黄","粉红","粉黄","黄黑","霓虹"] },
-  { name: "类型", tags: ["电商","角色设定","动物"] }
+  { name: "类型", tags: ["电商","角色设定","动物","品牌"] }
 ];
 
 var ITEMS = [
+  /* —— 2026-10-27 · 每日批保留的 4 张 —— */
+  { id:"noise-chaos", cat:"poster", theme:"collage", verdict:"ok", date:"2026-10-27",
+    title:"实验性排版海报",
+    tags:["拼贴","编辑风"], w:736, h:920,
+    img:"https://i.pinimg.com/736x/8d/40/a7/8d40a7f464e13b476f8ae94e24390adc.jpg",
+    alt:"噪点与混乱排版的实验性排版海报",
+    src:"https://www.pinterest.com/pin/1101833865137574577/" },
+  { id:"lpoint-diary", cat:"brand", theme:"brand", verdict:"like", date:"2026-10-27",
+    title:"橙蓝日记本品牌设计",
+    tags:["品牌","极简"], w:787, h:1181,
+    img:"https://i.pinimg.com/736x/73/03/e6/7303e65435b83619503b025a6678d034.jpg",
+    alt:"橙蓝配色的日记本品牌设计",
+    src:"https://www.pinterest.com/pin/320881542185287417/" },
+  { id:"notebook-cover", cat:"book", theme:"minimal", verdict:"ok", date:"2026-10-27",
+    title:"多色方格笔记本封面设计",
+    tags:["极简","格子"], w:561, h:733,
+    img:"https://i.pinimg.com/736x/10/97/e7/1097e7d8eafef914bc13d50419f44893.jpg",
+    alt:"多色方格的笔记本封面设计",
+    src:"https://www.pinterest.com/pin/595530750753442103/" },
+  { id:"osaka-castle", cat:"poster", theme:"classical", verdict:"fit", date:"2026-10-27",
+    title:"大阪城复古旅行海报",
+    tags:["古典","复古"], w:735, h:1040,
+    img:"https://i.pinimg.com/736x/12/7c/36/127c369101bfd730b635498e562b2ecd.jpg",
+    alt:"大阪城的复古旅行海报",
+    src:"https://www.pinterest.com/pin/648518415138712443/" },
+
   /* —— 2026-10-26 · 第二批保留的 4 张 —— */
   { id:"sculptural-vase", cat:"product", theme:"minimal", verdict:"ok", date:"2026-10-26",
     title:"干花雕塑陶瓶",
