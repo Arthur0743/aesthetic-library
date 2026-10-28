@@ -444,13 +444,51 @@ var RANK = { fit: 0, like: 1, ok: 2 };
 
 /* 标签按维度分组（分面筛选）：风格 / 技法 / 色彩 / 类型 */
 var TAG_GROUPS = [
-  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影","雾气","复古"] },
-  { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D","几何","格子"] },
-  { name: "色彩", tags: ["黑白","明黄","粉红","粉黄","黄黑","霓虹"] },
+  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影","雾气","复古","粗野主义"] },
+  { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D","几何","格子","撕纸"] },
+  { name: "色彩", tags: ["黑白","明黄","粉红","粉黄","黄黑","霓虹","金色","撞色"] },
   { name: "类型", tags: ["电商","角色设定","动物","品牌"] }
 ];
 
 var ITEMS = [
+  /* —— 2026-10-28 · 每日批保留的 6 张 —— */
+  { id:"torn-floral-poster", cat:"poster", theme:"collage", verdict:"like", date:"2026-10-28",
+    title:"撕纸拼贴花朵人像海报",
+    tags:["拼贴","撕纸"], w:736, h:919,
+    img:"https://i.pinimg.com/736x/d8/72/d7/d872d790e5e259dc8ac55c4e7f2cd893.jpg",
+    alt:"撕纸拼贴花朵人像海报",
+    src:"https://www.pinterest.com/pin/762093568233282587/" },
+  { id:"black-red-brutalist", cat:"poster", theme:"dark", verdict:"fit", date:"2026-10-28",
+    title:"黑红野兽派海报",
+    tags:["暗黑","粗野主义"], w:736, h:1040,
+    img:"https://i.pinimg.com/736x/d4/05/a0/d405a0339f612f245c200f5fddbaf7e3.jpg",
+    alt:"黑红野兽派海报",
+    src:"https://www.pinterest.com/pin/1111474383090059356/" },
+  { id:"golden-ridge-light", cat:"photo", theme:"photo", verdict:"like", date:"2026-10-28",
+    title:"金色山脊光束风光摄影",
+    tags:["光影","金色"], w:736, h:1308,
+    img:"https://i.pinimg.com/736x/aa/42/e3/aa42e39e8c4c440f6ccc1f4395778e87.jpg",
+    alt:"金色山脊光束风光摄影",
+    src:"https://www.pinterest.com/pin/1098456165388153040/" },
+  { id:"classical-sculpture-archive", cat:"poster", theme:"classical", verdict:"like", date:"2026-10-28",
+    title:"古典雕塑档案海报",
+    tags:["古典","雕塑"], w:736, h:920,
+    img:"https://i.pinimg.com/736x/9a/9f/0f/9a9f0ff162bc9774d8d17d81d91c127f.jpg",
+    alt:"古典雕塑档案海报",
+    src:"https://www.pinterest.com/pin/101331060749008978/" },
+  { id:"morocco-arch-travel", cat:"poster", theme:"classical", verdict:"fit", date:"2026-10-28",
+    title:"摩洛哥拱门复古旅行海报",
+    tags:["古典","复古"], w:736, h:1104,
+    img:"https://i.pinimg.com/736x/99/ab/ae/99abae1d7097f8ce2580e6d4cd3c1bc3.jpg",
+    alt:"摩洛哥拱门复古旅行海报",
+    src:"https://www.pinterest.com/pin/933019247829828700/" },
+  { id:"red-surreal-portrait", cat:"illo", theme:"illo", verdict:"like", date:"2026-10-28",
+    title:"红底黑白超现实人像插画",
+    tags:["超现实","撞色"], w:736, h:977,
+    img:"https://i.pinimg.com/736x/c1/b6/78/c1b67889ed43a699e4871f8db4d04a7b.jpg",
+    alt:"红底黑白超现实人像插画",
+    src:"https://www.pinterest.com/pin/834080793536291246/" },
+
   /* —— 2026-10-27 · 每日批保留的 4 张 —— */
   { id:"noise-chaos", cat:"poster", theme:"collage", verdict:"ok", date:"2026-10-27",
     title:"实验性排版海报",
