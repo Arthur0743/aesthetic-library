@@ -422,7 +422,7 @@
    已确认入库的图片不带序号；不喜欢的图不进库。
    排序：喜欢程度优先，同程度按日期新→旧，再按名字。
    ============================================================ */
-var CATS = { poster: "海报设计", web: "网页设计", character: "角色设计", illo: "插画", photo: "摄影", product: "产品", architecture: "建筑", brand: "品牌设计", book: "书籍装帧" };
+var CATS = { poster: "海报设计", web: "网页设计", character: "角色设计", illo: "插画", photo: "摄影", product: "产品", architecture: "建筑", brand: "品牌设计", book: "书籍装帧", scene: "场景", fashion: "服装设计" };
 var THEMES = {
   collage:   "拼贴编辑",
   dark:      "暗黑",
@@ -432,6 +432,8 @@ var THEMES = {
   minimal:   "极简",
   character: "角色设定",
   brand:     "品牌包装",
+  scene:     "场景",
+  fashion:   "服装设计",
   photo:     "摄影",
   illo:      "插画"
 };
@@ -444,13 +446,51 @@ var RANK = { fit: 0, like: 1, ok: 2 };
 
 /* 标签按维度分组（分面筛选）：风格 / 技法 / 色彩 / 类型 */
 var TAG_GROUPS = [
-  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影","雾气","复古","粗野主义"] },
+  { name: "风格", tags: ["编辑风","极简","波普","暗黑","朋克","街头","古典","赛博","未来感","轻奢","学院","日式","奇幻","超现实","光影","雾气","复古","粗野主义","前卫"] },
   { name: "技法", tags: ["拼贴","半调","铬彩","磨砂","雕塑","特写","3D","几何","格子","撕纸"] },
-  { name: "色彩", tags: ["黑白","明黄","粉红","粉黄","黄黑","霓虹","金色","撞色"] },
-  { name: "类型", tags: ["电商","角色设定","动物","品牌"] }
+  { name: "色彩", tags: ["黑白","明黄","粉红","粉黄","黄黑","霓虹","金色","撞色","紫色"] },
+  { name: "类型", tags: ["电商","角色设定","动物","品牌","动漫","场景","服装"] }
 ];
 
 var ITEMS = [
+  /* —— 2026-10-29 · 每日批保留的 6 张 —— */
+  { id:"anime-collage-poster", cat:"poster", theme:"collage", verdict:"fit", date:"2026-10-29",
+    title:"多IP动漫角色斜切漫画格拼贴海报",
+    tags:["拼贴","动漫"], w:842, h:1264,
+    img:"https://i.pinimg.com/736x/c0/a1/f4/c0a1f4091affb548d289617153b4ce2d.jpg",
+    alt:"多IP动漫角色斜切漫画格拼贴海报",
+    src:"https://www.pinterest.com/pin/1102185708858047805/" },
+  { id:"moonlit-torii-scene", cat:"scene", theme:"scene", verdict:"fit", date:"2026-10-29",
+    title:"月夜湖畔红色鸟居动漫场景",
+    tags:["场景","光影"], w:720, h:1280,
+    img:"https://i.pinimg.com/736x/a1/86/53/a186531f788b264e4709544e39ff0f2b.jpg",
+    alt:"月夜湖畔红色鸟居动漫场景",
+    src:"https://www.pinterest.com/pin/1094304409489628857/" },
+  { id:"purple-avantgarde-fashion", cat:"fashion", theme:"fashion", verdict:"ok", date:"2026-10-29",
+    title:"紫色前卫时装编辑大片",
+    tags:["前卫","紫色"], w:768, h:1376,
+    img:"https://i.pinimg.com/736x/37/cf/d9/37cfd904971bddf73d56014ac05ce112.jpg",
+    alt:"紫色前卫时装编辑大片",
+    src:"https://www.pinterest.com/pin/580471839517701061/" },
+  { id:"colorblock-suit-fashion", cat:"fashion", theme:"fashion", verdict:"ok", date:"2026-10-29",
+    title:"橙黄蓝绿撞色套装时装编辑",
+    tags:["撞色","服装"], w:832, h:1248,
+    img:"https://i.pinimg.com/736x/0b/ef/a2/0befa2e621a01de6c6e95b01c339bb33.jpg",
+    alt:"橙黄蓝绿撞色套装时装编辑",
+    src:"https://www.pinterest.com/pin/633459503877802008/" },
+  { id:"sanfrancisco-travel", cat:"poster", theme:"classical", verdict:"like", date:"2026-10-29",
+    title:"旧金山科伊特塔复古旅行海报",
+    tags:["古典","复古"], w:1080, h:1920,
+    img:"https://i.pinimg.com/736x/83/c0/b5/83c0b59f70c49679eb62ea56793a088b.jpg",
+    alt:"旧金山科伊特塔复古旅行海报",
+    src:"https://www.pinterest.com/pin/1143281055442394093/" },
+  { id:"layered-misty-mountains", cat:"photo", theme:"photo", verdict:"like", date:"2026-10-29",
+    title:"层叠雾山摄影",
+    tags:["雾气","光影"], w:1200, h:1800,
+    img:"https://i.pinimg.com/736x/08/1c/19/081c19782b3ac48b9f02be9b477e6b91.jpg",
+    alt:"层叠雾山摄影",
+    src:"https://www.pinterest.com/pin/1136384918509195468/" },
+
   /* —— 2026-10-28 · 每日批保留的 6 张 —— */
   { id:"torn-floral-poster", cat:"poster", theme:"collage", verdict:"like", date:"2026-10-28",
     title:"撕纸拼贴花朵人像海报",
